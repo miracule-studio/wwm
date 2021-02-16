@@ -1,0 +1,46 @@
+<header>
+    <nav class="navbar navbar-expand-md fixed-top shadow" color-on-scroll="500">
+        <div class="container">
+            <a class="navbar-brand" href="#" [routerLink]="['/']">
+                <img class="logo" src="./assets/img/logonew9.png" alt="WWM">
+            </a>
+            <div class="navbar-collapse d-none d-md-block" id="navbarCollapse">
+                <ul id="navigation" class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="['/about']">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="['/articles']">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="['/items']">Items</a>
+                    </li>
+                </ul>
+            </div>
+            <button mat-icon-button class="button-search float-right" (click)="openSearch()">
+                <mat-icon matTooltip='Search' matTooltipPosition='above' matTooltipClass='primary-tooltip'>search</mat-icon>
+            </button>
+            <button mat-icon-button class="button-menu float-right" (click)="openMenu()">
+                <mat-icon matTooltip='Menu' matTooltipPosition='above' matTooltipClass='primary-tooltip'>menu</mat-icon>
+            </button>
+        </div>
+    </nav>
+      
+    <div *ngIf="openmenu" id="modal-menu">
+        <button id="modalmenu-close" (click)="closeMenu()">X</button>
+        <ul class="navbar-nav mt-5 mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/articles']" (click)="closeMenu()">Articles</a>
+            </li>
+        </ul>
+    </div>
+      
+    <div *ngIf="opensearch" id="modal-search">
+        <button id="modalsearch-close" (click)="closeSearch()">X</button>
+        <form class="form-inline mt-5 md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchArticle" aria-label="Search" [(ngModel)]="searchArticle">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="onFindArticles()">Search</button>
+        </form>
+    </div>
+      
+</header>

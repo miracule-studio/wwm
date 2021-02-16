@@ -1,0 +1,137 @@
+html, body {
+    height: 100%;
+    min-height: 150vh;
+}
+.block {
+    min-height: 600px;
+}
+.h1 {
+    background: #ffba5a;
+    font-weight: 300;
+    width: fit-content;
+    border-bottom: 3px solid #FFBA5A;
+    padding: .25rem;
+}
+.article {
+    margin-bottom: 1rem;
+}
+.card-wf {
+    display: block;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+.article img,
+.article .card-body {
+    float: left;
+}
+.card-body {
+    height: 100%;
+}
+.logo {
+    width: 50px;
+    float: left;
+}
+.article:nth-child(2n) img {
+    float: right;
+}
+.article:nth-child(2n) .card-body {
+    text-align: right;
+    float: right;
+}
+.article:nth-child(2n) .a-title:before {
+    left: auto;
+    right: 0;
+}
+.article:nth-child(2n) .fl {
+    text-align: left;
+}
+.article:nth-child(2n) .logo {
+    float: right;
+}
+.bg-black {
+    background-color: #111 !important;
+}
+.card-wf.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .5);
+    transition: all .25s ease 0s;
+}
+.card-wf.box-shadow:hover {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .7);
+}
+.card-wf > img:hover {
+    cursor: pointer;
+}
+a.card-text:hover {
+    color: #da1313;
+    text-decoration: none;
+}
+.card-wf button {
+    background: transparent;
+    border: none;
+    color: #eee;
+}
+.card-wf button.button-edit-article:hover {
+    color: #ba8b00;
+}
+.card-wf button.button-delete-article:hover {
+    color: #da1313;
+}
+button a:hover {
+    color: #fff;
+}
+
+.a-title {
+    position: relative;
+    font-size: 28px;
+    font-weight: 400;
+    color: #333;
+}
+.a-title:before {
+    content: "";
+    width: 80%;
+    height: 1px;
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-top-color: #FFBA5A;
+    border-top-width: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: all .25s ease 0s;
+}
+.a-title:hover:before {
+    width: 40%;
+    border-top-color: #da1313;
+}
+.desc {
+    line-height: 1.5em;
+    font-size: 16px;
+    color: #666;
+    text-align: justify;
+}
+.text-green {
+    color: #2b9295!important;
+    font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+    .card-body {
+        float: left;
+        display: block!important;
+    }
+    .article:nth-child(2n) img {
+        float: left;
+    }
+    .article:nth-child(2n) .card-body {
+        text-align: left;
+        float: left;
+    }
+    .article:nth-child(2n) .a-title:before {
+        left: 0;
+        right: auto;
+    }
+    .article:nth-child(2n) .logo {
+        float: left;
+    }
+}
+
