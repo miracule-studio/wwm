@@ -1,0 +1,121 @@
+<section id="{{ 'section-'+id }}" class="section-block {{ name_template }}" [ngSwitch]="name_template">
+
+    <ng-template ngSwitchCase="default">
+        <div class='container' [style.background-image]="'url(' + image_url + ')'">
+            <div class='row'>
+                <div class='col-12 col-sm-6 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+                <div class='col-12 col-sm-6 text-right'></div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchCase="defaultFullwidth">
+        <div class='container-fluid' [style.background-image]="'url(' + image_url + ')'">
+            <div class='row'>
+                <div class='col-12 col-sm-6 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+                <div class='col-12 col-sm-6 text-right'></div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchCase="right">
+        <div class='container' [style.background-image]="'url(' + image_url + ')'">
+            <div class='row'>
+                <div class='col-12 col-sm-6 '></div>
+                <div class='col-12 col-sm-6 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchCase="rightFullwidth">
+        <div class='container-fluid' [style.background-image]="'url(' + image_url + ')'">
+            <div class='row'>
+                <div class='col-12 col-sm-6'></div>
+                <div class='col-12 col-sm-6 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchCase="fullwidth">
+        <div class='container-fluid  {{class_css}}' [style.background-image]="'url(' + image_url + ')'">
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-12 edit-block p-5'>
+                        <h2 class='title-h2'>{{title}}</h2>
+                        <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchCase="imagetopleft">
+        <div class='container imagetopleft'>
+            <div class='row'>
+                <div class='col-12 col-sm-12 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="empty-left">
+                        <img src="{{image_url}}" alt="" class="imgshadow rounded shadow">
+                    </div>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchCase="imagetopright">
+        <div class='container imagetopright'>
+            <div class='row'>
+                <div class='col-12 col-sm-12 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="empty-right">
+                        <img src="{{image_url}}" alt="" class="imgshadow rounded shadow">
+                    </div>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <!-- Image Full Width -->
+    <ng-template ngSwitchCase="imagefullwidth">
+        <div class='container-fluid  {{class_css}}'>
+            <div class="row">
+                <img src="{{image_url}}" width="100%">
+            </div>
+        </div>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-12 edit-block pl-5 pr-5 pt-1 bp-1'>
+                    <p class='img-caption' style="margin-bottom:0;"><i>{{title}}</i></p>
+                    <span [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></span>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template ngSwitchDefault>
+        <div class='container' [style.background-image]="'url(' + image_url + ')'">
+            <div class='row'>
+                <div class='col-12 edit-block {{class_css}}'>
+                    <h2 class='title-h2'>{{title}}</h2>
+                    <div class="content" [innerHTML]="content | safeHtml" (click)="processLinks($event)" (mouseover)="selectData($event)"></div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    
+</section>
+    

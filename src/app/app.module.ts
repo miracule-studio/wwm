@@ -40,7 +40,6 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
-import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 
@@ -49,7 +48,6 @@ import { FooterComponent } from './layouts/footer/footer.component';
     AppComponent,
     AboutComponent,
     HomeComponent,
-    SafeHtmlPipe,
     HeaderComponent,
     FooterComponent
   ],

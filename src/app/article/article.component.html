@@ -1,1 +1,33 @@
-<p>article works!</p>
+<div class="container-fluid shadow bg-light p-5 pt-3 pb-5 mt-1 posrel" >
+    <div [@banner] class="hasbackimage" [style.background-image]="'url(' + image_url + ')'"></div>
+    <div [@banner2] class="container" >
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div *ngIf="!errorStatus">
+                <img src="{{ image_url }}" alt="" class="imgshadow rounded shadow">
+                </div>
+            </div>
+        
+            <div class="col-12 col-md-6 col-lg-8 text-light">
+                
+                <h1 *ngIf="!errorStatus">{{ editTitle }}</h1>
+                <h1 *ngIf="errorStatus">{{ statusText }}</h1>
+                <p>{{ updateText }}</p>
+            
+                <div *ngIf="!errorStatus">
+                    <div class="form-group slug">
+                        <p>{{ editSlug }}</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</div>
+      
+<div [@listAnimation]="sections?.length" class="block">
+    <div *ngFor="let section of sections; index as i" class="example-box">
+        <app-section [section]='section' [sort]='section.sort'></app-section>
+    </div>
+</div>
+      

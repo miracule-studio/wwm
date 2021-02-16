@@ -1,0 +1,36 @@
+.title-h1, .title-h2, .title-h3, .title-h4, .title-h5, .title-h6,
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+.posrel {
+    position: relative;
+    padding-top: 6rem !important;
+    overflow: hidden;
+    min-height: 408px;
+}
+.hasbackimage {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120%;
+    width: 99%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-position: center 20%;
+    filter: blur(10px) grayscale(0.5);
+    -webkit-filter: blur(10px) grayscale(0.5);
+    /*transition: all .5s linear;*/
+    transform: scale(1.2);
+}
+img.imgshadow {
+    box-shadow: 0px 4px 10px 1px #0000007a!important;
+}
+h1, .slug p {
+    font-weight: 300;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px #000000;
+}
+.block {
+    min-height: 600px;
+}

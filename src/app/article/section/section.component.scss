@@ -1,0 +1,60 @@
+.title-h1, .title-h2, .title-h3, .title-h4, .title-h5, .title-h6,
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+section {
+    position: relative;
+}
+
+.default > div,
+.defaultFullwidth > div {
+    background-position: right center;
+}
+
+.right  > div,
+.rightFullwidth  > div {
+    background-position: left center;
+}
+
+.fullwidth > div,
+.containerWidth > div {
+    background-position: center;
+}
+.edit-block {
+    padding-bottom: 5rem!important;
+}
+.imagetopleft .title-h2 {
+    text-align: right;
+}
+.empty-left {
+    position: relative;
+    float: left;
+    height: 120px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+.imagetopleft .empty-left img {
+    padding-top: 0!important;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+}
+.empty-right  {
+    position: relative;
+    float: right;
+    height: 120px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+.imagetopright .empty-right img {
+    padding-top: 0!important;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+}
+.content {
+    text-align: justify;
+}
